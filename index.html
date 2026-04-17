@@ -3,30 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>나의 포트폴리오</title>
-<meta name="description" content="취업 준비 중인 고등학생의 포트폴리오">
+<title>신호진 - 포트폴리오 | 광운인공지능고</title>
+<meta name="description" content="신호진 | 광운인공지능고 학생 포트폴리오. AI, 데이터 분석, 웹 개발 기반의 포트폴리오입니다.">
 <meta property="og:title" content="나의 포트폴리오">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg-hero: #0a0e1a;
-    --bg-about: #0d1220;
-    --bg-activity: #080c18;
-    --bg-project: #111827;
-    --bg-gallery: #0a0e1a;
-    --bg-video: #0d1422;
-    --bg-contact: #070b16;
-    --accent: #4f9cf9;
-    --accent2: #7b5cf0;
-    --accent3: #00d4aa;
-    --text-primary: #f0f4ff;
-    --text-secondary: #8b9dc3;
-    --text-muted: #4a5980;
-    --card-bg: rgba(255,255,255,0.04);
-    --card-border: rgba(255,255,255,0.08);
-    --gradient-1: linear-gradient(135deg, #4f9cf9 0%, #7b5cf0 100%);
-    --gradient-2: linear-gradient(135deg, #00d4aa 0%, #4f9cf9 100%);
+    --bg-hero: #ffffff;
+    --bg-about: #f8f9fa;
+    --bg-activity: #ffffff;
+    --bg-project: #f8f9fa;
+    --bg-gallery: #ffffff;
+    --bg-video: #f8f9fa;
+    --bg-contact: #ffffff;
+    --accent: #1428a0;
+    --accent2: #0055b8;
+    --accent3: #00b4e5;
+    --text-primary: #1a1a1a;
+    --text-secondary: #5a5a5a;
+    --text-muted: #8a8a8a;
+    --card-bg: #ffffff;
+    --card-border: #e8e8e8;
+    --gradient-1: linear-gradient(135deg, #1428a0 0%, #0055b8 100%);
+    --gradient-2: linear-gradient(135deg, #00b4e5 0%, #1428a0 100%);
   }
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -36,52 +36,47 @@
     color: var(--text-primary);
     overflow-x: hidden;
   }
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: #0a0e1a; }
-  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f8f9fa; }
+  ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
 
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 20px 60px;
     display: flex; align-items: center; justify-content: space-between;
-    background: rgba(10,14,26,0.85);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #ffffff;
+    border-bottom: 1px solid #e8e8e8;
   }
   .nav-logo {
-    font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: 3px;
-    background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px;
+    color: var(--accent); cursor: pointer; font-weight: 600;
   }
-  .nav-links { display: flex; gap: 36px; list-style: none; }
-  .nav-links a { font-size: 13px; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--text-primary); }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a { font-size: 14px; color: var(--text-secondary); text-decoration: none; transition: color 0.3s; font-weight: 500; }
+  .nav-links a:hover { color: var(--accent); }
   .nav-admin-btn {
-    font-size: 12px; padding: 8px 20px;
-    background: transparent; border: 1px solid var(--card-border);
-    color: var(--text-secondary); border-radius: 20px; cursor: pointer; transition: all 0.2s;
+    font-size: 13px; padding: 10px 24px;
+    background: transparent; border: 1px solid var(--accent);
+    color: var(--accent); border-radius: 4px; cursor: pointer; transition: all 0.3s; font-weight: 500;
   }
-  .nav-admin-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .nav-admin-btn:hover { background: var(--accent); color: #fff; }
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
   .hamburger span { width: 22px; height: 1.5px; background: var(--text-secondary); display: block; }
 
   /* HERO */
   #hero {
     min-height: 100vh; position: relative; overflow: hidden;
-    background: var(--bg-hero);
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
     display: flex; align-items: center;
   }
   .hero-bg {
     position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(79,156,249,0.12) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 40% at 20% 80%, rgba(123,92,240,0.1) 0%, transparent 60%);
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(20,40,160,0.08) 0%, transparent 70%);
   }
   .hero-grid {
     position: absolute; inset: 0; pointer-events: none;
-    background-image: linear-gradient(rgba(79,156,249,0.04) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(79,156,249,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background: none;
   }
   .hero-content {
     position: relative; z-index: 2;
@@ -90,29 +85,29 @@
   }
   .hero-tag {
     display: inline-flex; align-items: center; gap: 8px;
-    font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; font-weight: 600;
   }
-  .hero-tag::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+  .hero-tag::before { content: ''; width: 24px; height: 2px; background: var(--accent); }
   .hero-name {
-    font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 7vw, 100px);
-    line-height: 0.95; letter-spacing: 2px; margin-bottom: 20px;
+    font-family: 'Noto Sans KR', sans-serif; font-size: clamp(52px, 7vw, 80px);
+    line-height: 1.1; letter-spacing: -1px; margin-bottom: 24px; font-weight: 700;
   }
   .hero-name span { display: block; }
   .hero-name .highlight { background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .hero-subtitle { font-size: 16px; color: var(--text-secondary); line-height: 1.8; font-weight: 300; margin-bottom: 40px; max-width: 440px; }
   .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn-primary {
-    padding: 14px 36px; border-radius: 4px; cursor: pointer;
-    background: var(--gradient-1); border: none; color: #fff; font-size: 14px; font-weight: 500;
-    font-family: 'Noto Sans KR', sans-serif; transition: opacity 0.2s, transform 0.2s;
+    padding: 14px 40px; border-radius: 4px; cursor: pointer;
+    background: var(--accent); border: none; color: #fff; font-size: 15px; font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif; transition: opacity 0.3s, transform 0.3s;
   }
-  .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); }
   .btn-secondary {
-    padding: 14px 36px; border-radius: 4px; cursor: pointer;
-    background: transparent; border: 1px solid rgba(255,255,255,0.2);
-    color: var(--text-primary); font-size: 14px; font-family: 'Noto Sans KR', sans-serif; transition: all 0.2s;
+    padding: 14px 40px; border-radius: 4px; cursor: pointer;
+    background: transparent; border: 2px solid var(--text-primary);
+    color: var(--text-primary); font-size: 15px; font-family: 'Noto Sans KR', sans-serif; transition: all 0.3s; font-weight: 600;
   }
-  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-secondary:hover { background: var(--text-primary); color: #fff; }
   .hero-profile { display: flex; justify-content: center; align-items: center; }
   .profile-ring { position: relative; width: 340px; height: 340px; }
   .profile-ring::before {
@@ -125,30 +120,30 @@
   }
   @keyframes spin { to { transform: rotate(360deg); } }
   .profile-img {
-    width: 340px; height: 340px; border-radius: 50%;
-    background: linear-gradient(135deg, rgba(79,156,249,0.2) 0%, rgba(123,92,240,0.2) 100%);
-    border: 2px solid rgba(79,156,249,0.3);
+    width: 340px; height: 340px; border-radius: 12px;
+    background: #f0f3f8;
+    border: 2px solid #e8e8e8;
     display: flex; align-items: center; justify-content: center;
     font-size: 80px; overflow: hidden; position: relative;
   }
   .profile-img img { width: 100%; height: 100%; object-fit: cover; }
   .hero-stats { display: flex; gap: 40px; margin-top: 48px; }
   .stat-num {
-    font-family: 'Bebas Neue', sans-serif; font-size: 36px;
-    background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 36px;
+    color: var(--accent); font-weight: 700;
   }
-  .stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+  .stat-label { font-size: 13px; color: var(--text-secondary); letter-spacing: 0.5px; }
 
   /* SECTION COMMON */
   section { padding: 100px 60px; }
   .section-inner { max-width: 1200px; margin: 0 auto; }
   .section-label {
-    font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent);
-    margin-bottom: 12px; display: flex; align-items: center; gap: 12px;
+    font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 12px; font-weight: 700;
   }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: rgba(79,156,249,0.2); max-width: 60px; }
-  .section-title { font-size: clamp(28px, 4vw, 44px); font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
-  .section-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.8; max-width: 500px; margin-bottom: 60px; }
+  .section-label::after { content: ''; width: 60px; height: 3px; background: var(--accent); }
+  .section-title { font-size: clamp(32px, 5vw, 48px); font-weight: 700; line-height: 1.2; margin-bottom: 20px; color: var(--text-primary); }
+  .section-desc { font-size: 16px; color: var(--text-secondary); line-height: 1.8; max-width: 600px; margin-bottom: 60px; }
 
   /* ABOUT */
   #about { background: var(--bg-about); }
@@ -161,26 +156,22 @@
   }
   .info-cards { display: flex; flex-direction: column; gap: 16px; }
   .info-card {
-    padding: 24px 28px; background: var(--card-bg); border: 1px solid var(--card-border);
-    border-radius: 12px; transition: border-color 0.2s;
+    padding: 28px 32px; background: #f8f9fa; border: 1px solid #e8e8e8;
+    border-radius: 12px; transition: all 0.3s;
   }
-  .info-card:hover { border-color: rgba(79,156,249,0.3); }
+  .info-card:hover { background: #ffffff; border-color: var(--accent); transform: translateY(-2px); }
   .info-card-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
   .info-card-value { font-size: 15px; font-weight: 500; }
 
   /* ACTIVITY */
   #activity { background: var(--bg-activity); }
-  .activity-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+  .activity-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
   .activity-card {
-    padding: 32px 28px; background: var(--card-bg); border: 1px solid var(--card-border);
-    border-radius: 16px; position: relative; overflow: hidden; transition: transform 0.3s, border-color 0.3s;
+    padding: 32px 28px; background: #ffffff; border: 1px solid #e8e8e8;
+    border-radius: 12px; position: relative; overflow: hidden; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-  .activity-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: var(--gradient-1); transform: scaleX(0); transition: transform 0.3s; transform-origin: left;
-  }
-  .activity-card:hover { transform: translateY(-4px); border-color: rgba(79,156,249,0.3); }
-  .activity-card:hover::before { transform: scaleX(1); }
+  .activity-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 12px 24px rgba(20,40,160,0.12); }
   .activity-icon { font-size: 28px; margin-bottom: 16px; }
   .activity-category { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
   .activity-name { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
@@ -196,43 +187,41 @@
 
   /* PROJECT */
   #project { background: var(--bg-project); }
-  .project-list { display: flex; flex-direction: column; gap: 28px; }
+  .project-list { display: flex; flex-direction: column; gap: 32px; }
   .project-card {
     display: grid; grid-template-columns: 1fr 2fr;
-    background: var(--card-bg); border: 1px solid var(--card-border);
-    border-radius: 16px; overflow: hidden; transition: border-color 0.3s, transform 0.3s;
+    background: #ffffff; border: 1px solid #e8e8e8;
+    border-radius: 12px; overflow: hidden; transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-  .project-card:hover { border-color: rgba(123,92,240,0.4); transform: translateX(4px); }
+  .project-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 24px rgba(20,40,160,0.12); }
   .project-thumb {
-    background: linear-gradient(135deg, rgba(123,92,240,0.15), rgba(79,156,249,0.1));
+    background: linear-gradient(135deg, #f0f3f8 0%, #e8ebf0 100%);
     display: flex; align-items: center; justify-content: center;
-    font-size: 48px; min-height: 180px; position: relative; overflow: hidden;
-  }
-  .project-thumb::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(90deg, transparent 70%, var(--bg-project));
+    font-size: 48px; min-height: 200px; position: relative; overflow: hidden;
   }
   .project-info { padding: 32px 36px; }
   .project-tech { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
   .tech-badge {
-    padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 500;
-    background: rgba(123,92,240,0.15); color: #a78bfa; border: 1px solid rgba(123,92,240,0.2);
+    padding: 6px 14px; border-radius: 4px; font-size: 12px; font-weight: 600;
+    background: #f0f3f8; color: var(--accent); border: 1px solid #e8e8e8;
   }
-  .project-name { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
-  .project-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
-  .project-meta { display: flex; gap: 24px; }
-  .project-meta span { font-size: 12px; color: var(--text-muted); }
-  .project-meta strong { color: var(--text-secondary); }
+  .project-name { font-size: 20px; font-weight: 700; margin-bottom: 14px; }
+  .project-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px; }
+  .project-meta { display: flex; gap: 32px; }
+  .project-meta span { font-size: 13px; color: var(--text-secondary); }
+  .project-meta strong { color: var(--text-primary); font-weight: 600; }
 
   /* GALLERY */
   #gallery { background: var(--bg-gallery); }
-  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .gallery-item {
     aspect-ratio: 4/3; border-radius: 12px; overflow: hidden;
-    background: var(--card-bg); border: 1px solid var(--card-border);
-    position: relative; cursor: pointer; transition: transform 0.3s;
+    background: #f0f3f8; border: 1px solid #e8e8e8;
+    position: relative; cursor: pointer; transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-  .gallery-item:hover { transform: scale(1.02); }
+  .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(20,40,160,0.12); border-color: var(--accent); }
   .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .gallery-placeholder {
     width: 100%; height: 100%;
@@ -241,11 +230,11 @@
   }
   .gallery-placeholder .icon { font-size: 28px; }
   .gallery-upload-area {
-    aspect-ratio: 4/3; border-radius: 12px; border: 1px dashed rgba(255,255,255,0.12);
+    aspect-ratio: 4/3; border-radius: 12px; border: 2px dashed #e8e8e8;
     display: none; flex-direction: column; align-items: center; justify-content: center;
-    gap: 8px; color: var(--text-muted); font-size: 12px; cursor: pointer; transition: all 0.2s;
+    gap: 12px; color: var(--text-secondary); font-size: 16px; cursor: pointer; transition: all 0.3s;
   }
-  .gallery-upload-area:hover { border-color: var(--accent3); color: var(--accent3); }
+  .gallery-upload-area:hover { border-color: var(--accent); color: var(--accent); background: #f0f3f8; }
   .gallery-overlay {
     position: absolute; inset: 0; background: rgba(0,0,0,0.6);
     display: flex; align-items: flex-end; padding: 16px;
@@ -256,12 +245,13 @@
 
   /* VIDEO */
   #video-section { background: var(--bg-video); }
-  .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
   .video-item {
-    border-radius: 16px; overflow: hidden;
-    background: var(--card-bg); border: 1px solid var(--card-border); transition: border-color 0.3s;
+    border-radius: 12px; overflow: hidden;
+    background: #ffffff; border: 1px solid #e8e8e8; transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
-  .video-item:hover { border-color: rgba(0,212,170,0.3); }
+  .video-item:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 12px 24px rgba(20,40,160,0.12); }
   .video-thumb {
     aspect-ratio: 16/9; background: linear-gradient(135deg, rgba(0,212,170,0.1), rgba(79,156,249,0.1));
     display: flex; align-items: center; justify-content: center; position: relative;
@@ -294,101 +284,110 @@
   .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
   .contact-links { display: flex; flex-direction: column; gap: 16px; }
   .contact-item {
-    display: flex; align-items: center; gap: 20px; padding: 20px 24px;
-    background: var(--card-bg); border: 1px solid var(--card-border);
-    border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: border-color 0.2s;
+    display: flex; align-items: center; gap: 20px; padding: 24px 28px;
+    background: #f8f9fa; border: 1px solid #e8e8e8;
+    border-radius: 12px; text-decoration: none; color: var(--text-primary); transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
   }
-  .contact-item:hover { border-color: rgba(79,156,249,0.4); background: rgba(79,156,249,0.05); }
-  .contact-icon { font-size: 22px; width: 44px; text-align: center; flex-shrink: 0; }
-  .contact-text .label { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
-  .contact-text .value { font-size: 15px; font-weight: 500; margin-top: 2px; }
-  .contact-form { display: flex; flex-direction: column; gap: 16px; }
-  .form-group label { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
+  .contact-item:hover { background: #ffffff; border-color: var(--accent); transform: translateY(-2px); }
+  .contact-icon { font-size: 24px; width: 48px; text-align: center; flex-shrink: 0; }
+  .contact-text .label { font-size: 12px; color: var(--text-muted); letter-spacing: 0.5px; text-transform: uppercase; font-weight: 600; }
+  .contact-text .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+  .contact-form { display: flex; flex-direction: column; gap: 20px; }
+  .form-group label { font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-primary); display: block; margin-bottom: 10px; font-weight: 600; }
   .form-group input, .form-group textarea {
-    width: 100%; padding: 14px 18px; background: rgba(255,255,255,0.04); border: 1px solid var(--card-border);
-    border-radius: 8px; color: var(--text-primary); font-size: 14px; font-family: 'Noto Sans KR', sans-serif;
-    transition: border-color 0.2s; outline: none;
+    width: 100%; padding: 14px 18px; background: #f8f9fa; border: 1px solid #e8e8e8;
+    border-radius: 8px; color: var(--text-primary); font-size: 15px; font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.3s; outline: none;
   }
-  .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
-  .form-group textarea { min-height: 120px; resize: vertical; }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); background: #ffffff; }
+  .form-group textarea { min-height: 140px; resize: vertical; }
   .submit-btn {
-    padding: 14px; border-radius: 8px; cursor: pointer; background: var(--gradient-1);
-    border: none; color: #fff; font-size: 14px; font-weight: 500;
-    font-family: 'Noto Sans KR', sans-serif; transition: opacity 0.2s;
+    padding: 14px; border-radius: 6px; cursor: pointer; background: var(--accent);
+    border: none; color: #fff; font-size: 15px; font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif; transition: all 0.3s;
   }
-  .submit-btn:hover { opacity: 0.85; }
+  .submit-btn:hover { opacity: 0.85; transform: translateY(-2px); }
 
   /* FOOTER */
   footer {
-    background: #050810; padding: 40px 60px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    background: #f8f9fa; padding: 40px 60px;
+    border-top: 1px solid #e8e8e8;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 3px; color: var(--text-muted); }
-  .footer-copy { font-size: 12px; color: var(--text-muted); }
+  .footer-logo { font-family: 'Noto Sans KR', sans-serif; font-size: 16px; letter-spacing: 1px; color: var(--accent); font-weight: 700; }
+  .footer-copy { font-size: 13px; color: var(--text-muted); }
 
   /* MODAL */
   .modal-overlay {
     display: none; position: fixed; inset: 0; z-index: 200;
-    background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.5); backdrop-filter: blur(8px);
     align-items: center; justify-content: center;
   }
   .modal-overlay.active { display: flex; }
   .modal-box {
-    background: #0d1220; border: 1px solid rgba(79,156,249,0.2);
-    border-radius: 20px; padding: 48px 40px; width: 100%; max-width: 400px;
+    background: #ffffff; border: 1px solid #e8e8e8;
+    border-radius: 16px; padding: 40px 36px; width: 100%; max-width: 400px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
   }
-  .modal-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-  .modal-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
-  .modal-group { margin-bottom: 16px; }
-  .modal-group label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 8px; }
+  .modal-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary); }
+  .modal-sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 32px; }
+  .modal-group { margin-bottom: 20px; }
+  .modal-group label { font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-primary); display: block; margin-bottom: 8px; font-weight: 600; }
   .modal-group input {
-    width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-primary);
-    font-size: 14px; font-family: 'Noto Sans KR', sans-serif; outline: none; transition: border-color 0.2s;
+    width: 100%; padding: 12px 16px; background: #f8f9fa;
+    border: 1px solid #e8e8e8; border-radius: 6px; color: var(--text-primary);
+    font-size: 14px; font-family: 'Noto Sans KR', sans-serif; outline: none; transition: all 0.3s;
   }
-  .modal-group input:focus { border-color: var(--accent); }
-  .modal-error { font-size: 12px; color: #f87171; margin-top: 8px; display: none; }
-  .modal-btns { display: flex; gap: 12px; margin-top: 24px; }
+  .modal-group input:focus { border-color: var(--accent); background: #ffffff; }
+  .modal-error { font-size: 12px; color: #d32f2f; margin-top: 8px; display: none; }
+  .modal-btns { display: flex; gap: 12px; margin-top: 32px; }
   .modal-login-btn {
-    flex: 1; padding: 12px; border-radius: 8px; cursor: pointer; background: var(--gradient-1);
-    border: none; color: #fff; font-size: 14px; font-weight: 500; font-family: 'Noto Sans KR', sans-serif;
+    flex: 1; padding: 12px; border-radius: 6px; cursor: pointer; background: var(--accent);
+    border: none; color: #fff; font-size: 14px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.3s;
   }
+  .modal-login-btn:hover { opacity: 0.85; transform: translateY(-2px); }
   .modal-cancel-btn {
-    flex: 1; padding: 12px; border-radius: 8px; cursor: pointer; background: transparent;
-    border: 1px solid rgba(255,255,255,0.15); color: var(--text-secondary);
-    font-size: 14px; font-family: 'Noto Sans KR', sans-serif;
+    flex: 1; padding: 12px; border-radius: 6px; cursor: pointer; background: #f8f9fa;
+    border: 1px solid #e8e8e8; color: var(--text-primary);
+    font-size: 14px; font-family: 'Noto Sans KR', sans-serif; font-weight: 600; transition: all 0.3s;
   }
+  .modal-cancel-btn:hover { background: #ffffff; border-color: var(--accent); }
 
   /* EDIT MODE */
   .edit-mode .editable {
-    outline: 1px dashed rgba(79,156,249,0.4); outline-offset: 3px; border-radius: 4px; cursor: text;
+    outline: 1px dashed var(--accent); outline-offset: 3px; border-radius: 4px; cursor: text;
   }
-  .edit-mode .editable:focus { outline: 2px solid var(--accent); }
+  .edit-mode .editable:focus { outline: 2px solid var(--accent); background: #f0f3f8; }
   .edit-toolbar {
     display: none; position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
-    z-index: 150; background: #0d1220; border: 1px solid rgba(79,156,249,0.3);
-    border-radius: 40px; padding: 10px 20px; align-items: center; gap: 12px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.6); white-space: nowrap;
+    z-index: 150; background: #ffffff; border: 1px solid #e8e8e8; box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    border-radius: 12px; padding: 12px 20px; align-items: center; gap: 12px;
+    white-space: nowrap;
   }
   .edit-toolbar.visible { display: flex; }
-  .edit-toolbar > span { font-size: 12px; color: var(--accent); font-weight: 500; }
+  .edit-toolbar > span { font-size: 13px; color: var(--text-primary); font-weight: 600; }
   .toolbar-btn {
-    padding: 8px 18px; border-radius: 20px; cursor: pointer;
-    border: none; font-size: 12px; font-family: 'Noto Sans KR', sans-serif; font-weight: 500;
+    padding: 8px 16px; border-radius: 6px; cursor: pointer;
+    border: none; font-size: 12px; font-family: 'Noto Sans KR', sans-serif; font-weight: 600; transition: all 0.3s;
   }
-  .toolbar-save { background: var(--gradient-1); color: #fff; }
-  .toolbar-logout { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: var(--text-secondary); }
-  .toolbar-add { background: rgba(79,156,249,0.1); color: var(--accent); border: 1px solid rgba(79,156,249,0.2); }
-  .toolbar-add2 { background: rgba(123,92,240,0.1); color: #a78bfa; border: 1px solid rgba(123,92,240,0.2); }
+  .toolbar-save { background: var(--accent); color: #fff; }
+  .toolbar-save:hover { opacity: 0.85; transform: translateY(-1px); }
+  .toolbar-logout { background: #f8f9fa; border: 1px solid #e8e8e8; color: var(--text-secondary); }
+  .toolbar-logout:hover { background: #ffffff; border-color: var(--accent); }
+  .toolbar-add { background: #f0f3f8; color: var(--accent); border: 1px solid #e8e8e8; }
+  .toolbar-add:hover { background: #ffffff; }
+  .toolbar-add2 { background: #f0f3f8; color: var(--accent); border: 1px solid #e8e8e8; }
+  .toolbar-add2:hover { background: #ffffff; }
 
   /* UPLOAD */
   .upload-input { display: none; }
   .editable-img { position: relative; cursor: default; }
   .img-overlay {
-    position: absolute; inset: 0; background: rgba(0,0,0,0.5);
+    position: absolute; inset: 0; background: rgba(0,0,0,0.4);
     display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity 0.2s; border-radius: 50%;
+    opacity: 0; transition: opacity 0.3s; border-radius: 12px;
     font-size: 12px; color: #fff; flex-direction: column; gap: 4px;
   }
   .edit-mode .editable-img { cursor: pointer; }
@@ -401,8 +400,8 @@
   /* TOAST */
   .toast {
     position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
-    background: var(--accent); color: #fff; padding: 10px 24px; border-radius: 20px;
-    font-size: 13px; z-index: 300; display: none; white-space: nowrap;
+    background: var(--accent); color: #fff; padding: 12px 28px; border-radius: 8px;
+    font-size: 14px; z-index: 300; display: none; white-space: nowrap; box-shadow: 0 12px 24px rgba(20,40,160,0.3);
   }
   .toast.show { display: block; animation: fadeInOut 2.5s ease forwards; }
   @keyframes fadeInOut { 0%{opacity:0} 15%{opacity:1} 80%{opacity:1} 100%{opacity:0} }
@@ -431,7 +430,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo" onclick="scrollTo({top:0,behavior:'smooth'})">PORTFOLIO</div>
+  <div class="nav-logo" onclick="scrollTo({top:0,behavior:'smooth'})">SHIN HO-JIN</div>
   <ul class="nav-links" id="nav-links">
     <li><a href="#about">소개</a></li>
     <li><a href="#activity">활동</a></li>
@@ -452,27 +451,27 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div class="hero-left fade-up">
-      <div class="hero-tag">취업 준비 포트폴리오</div>
+      <div class="hero-tag">광운인공지능고 재학중</div>
       <h1 class="hero-name">
-        <span class="highlight editable" contenteditable="false">홍길동</span>
-        <span style="font-size:0.55em;color:var(--text-secondary);font-family:'Noto Sans KR';font-weight:300;" class="editable" contenteditable="false">고등학생</span>
+        <span class="highlight editable" contenteditable="false">신호진</span>
+        <span style="font-size:0.45em;color:var(--text-secondary);font-family:'Noto Sans KR';font-weight:400;" class="editable" contenteditable="false">Kwangwoon AI High School Student</span>
       </h1>
-      <p class="hero-subtitle editable" contenteditable="false">꿈을 향해 나아가는 열정적인 학생입니다.<br>새로운 도전을 두려워하지 않으며,<br>성실함과 창의력으로 목표를 이루어 갑니다.</p>
+      <p class="hero-subtitle editable" contenteditable="false">혁신적인 AI 기술과 웹 개발에 관심 있는 학생입니다.<br>끊임없는 학습과 창의적 사고로 미래 기술을 개척하고 있습니다.</p>
       <div class="hero-btns">
         <a href="#contact"><button class="btn-primary">연락하기</button></a>
         <a href="#project"><button class="btn-secondary">프로젝트 보기</button></a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-num editable" contenteditable="false">12+</div>
+          <div class="stat-num editable" contenteditable="false">15+</div>
           <div class="stat-label">활동 경험</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num editable" contenteditable="false">5+</div>
+          <div class="stat-num editable" contenteditable="false">8+</div>
           <div class="stat-label">프로젝트</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num editable" contenteditable="false">3+</div>
+          <div class="stat-num editable" contenteditable="false">5+</div>
           <div class="stat-label">수상 경력</div>
         </div>
       </div>
@@ -481,8 +480,8 @@
       <div class="profile-ring">
         <div class="profile-img editable-img" onclick="triggerProfileUpload()">
           <img id="profile-img" src="" alt="프로필 사진" style="display:none">
-          <span id="profile-placeholder">🧑‍🎓</span>
-          <div class="img-overlay">📷<span>사진 변경</span></div>
+          <span id="profile-placeholder">👨‍💻</span>
+          <div class="img-overlay">📷 사진 변경</div>
         </div>
       </div>
       <input type="file" id="profile-upload" class="upload-input" accept="image/*" onchange="handleProfileUpload(event)">
@@ -497,24 +496,29 @@
     <h2 class="section-title fade-up">자기소개</h2>
     <div class="about-grid">
       <div class="about-text fade-up">
-        <p class="editable" contenteditable="false">안녕하세요! 저는 <strong>홍길동</strong>입니다. 현재 ○○고등학교에 재학 중이며, 졸업 후 취업을 목표로 열심히 준비하고 있습니다.</p>
-        <p class="editable" contenteditable="false">다양한 교내외 활동을 통해 팀워크와 리더십을 키워왔으며, 문제 해결 능력과 창의적 사고로 여러 프로젝트를 성공적으로 완수한 경험이 있습니다.</p>
-        <p class="editable" contenteditable="false">성실함과 끈기를 바탕으로 어떤 환경에서도 빠르게 적응하고, 맡은 일에 최선을 다하겠습니다.</p>
+        <p class="editable" contenteditable="false">안녕하세요! 저는 <strong>신호진</strong>입니다. 광운인공지능고등학교에 재학 중이며, AI와 데이터 기술, 웹 개발을 깊이 있게 학습하고 있습니다.</p>
+        <p class="editable" contenteditable="false">전자기능사, 전기기능사, 3D 프린터 운용기능사 자격증을 취득하여 실무 능력을 확보하고 있습니다. 학교에서 학생회 체육부장으로 활동하고 있으며, 3년간 학급 회장을 역임하면서 리더십과 책임감을 배우고 있습니다.</p>
+        <p class="editable" contenteditable="false">혁신적인 기술과 창의적 사고를 통해 실제 문제를 해결하는 프로젝트에 참여하고 있으며, 지속적인 학습과 실전 경험을 통해 성장해 나가고 있습니다.</p>
+        <p class="editable" contenteditable="false">새로운 도전과 협업을 통해 더 나은 솔루션을 만들어내는 개발자가 되기 위해 노력하고 있습니다.</p>
         <div class="skills-wrap" id="skills-wrap">
-          <span class="skill-tag editable" contenteditable="false">성실함</span>
-          <span class="skill-tag editable" contenteditable="false">창의력</span>
-          <span class="skill-tag editable" contenteditable="false">팀워크</span>
+          <span class="skill-tag editable" contenteditable="false">AI/ML</span>
+          <span class="skill-tag editable" contenteditable="false">데이터 분석</span>
+          <span class="skill-tag editable" contenteditable="false">웹 개발</span>
+          <span class="skill-tag editable" contenteditable="false">3D 프린팅</span>
           <span class="skill-tag editable" contenteditable="false">리더십</span>
+          <span class="skill-tag editable" contenteditable="false">창의력</span>
           <span class="skill-tag editable" contenteditable="false">문제해결</span>
-          <span class="skill-tag editable" contenteditable="false">책임감</span>
+          <span class="skill-tag editable" contenteditable="false">협업능력</span>
         </div>
       </div>
       <div class="info-cards fade-up" style="transition-delay:0.15s">
-        <div class="info-card"><div class="info-card-label">이름</div><div class="info-card-value editable" contenteditable="false">홍길동</div></div>
-        <div class="info-card"><div class="info-card-label">학교</div><div class="info-card-value editable" contenteditable="false">○○고등학교 3학년</div></div>
-        <div class="info-card"><div class="info-card-label">관심 직종</div><div class="info-card-value editable" contenteditable="false">IT 개발 / 디자인</div></div>
-        <div class="info-card"><div class="info-card-label">자격증</div><div class="info-card-value editable" contenteditable="false">정보처리기능사 취득 예정</div></div>
-        <div class="info-card"><div class="info-card-label">이메일</div><div class="info-card-value editable" contenteditable="false">example@email.com</div></div>
+        <div class="info-card"><div class="info-card-label">이름</div><div class="info-card-value editable" contenteditable="false">신호진</div></div>
+        <div class="info-card"><div class="info-card-label">학교</div><div class="info-card-value editable" contenteditable="false">광운인공지능고등학교 3학년</div></div>
+        <div class="info-card"><div class="info-card-label">보유 자격증</div><div class="info-card-value editable" contenteditable="false">전자기능사 / 전기기능사 / 3D프린터운용기능사</div></div>
+        <div class="info-card"><div class="info-card-label">학생회 역할</div><div class="info-card-value editable" contenteditable="false">학생회 체육부장 / 학급 회장 (3년)</div></div>
+        <div class="info-card"><div class="info-card-label">관심 분야</div><div class="info-card-value editable" contenteditable="false">AI / 데이터 분석 / 웹 개발</div></div>
+        <div class="info-card"><div class="info-card-label">주력 기술</div><div class="info-card-value editable" contenteditable="false">Python, JavaScript, React</div></div>
+        <div class="info-card"><div class="info-card-label">이메일</div><div class="info-card-value editable" contenteditable="false">24kwai0407@sonline20.sen.go.kr</div></div>
       </div>
     </div>
   </div>
@@ -524,45 +528,59 @@
 <section id="activity">
   <div class="section-inner">
     <div class="section-label">Activities</div>
-    <h2 class="section-title fade-up">주요 교내외 활동</h2>
-    <p class="section-desc fade-up">학교 생활과 다양한 외부 활동을 통해 쌓아온 경험들입니다.</p>
+    <h2 class="section-title fade-up">주요 활동 경력</h2>
+    <p class="section-desc fade-up">광운인공지능고에서의 다양한 교육과정 및 대외 활동을 통해 쌓아온 경험들입니다.</p>
     <div class="activity-grid" id="activity-grid">
       <div class="activity-card fade-up">
         <div class="activity-icon">🏆</div>
         <div class="activity-category">수상</div>
-        <div class="activity-name editable" contenteditable="false">교내 프레젠테이션 대회 1위</div>
-        <div class="activity-detail editable" contenteditable="false">주제: 미래 에너지 기술. 팀 리더로서 기획부터 발표까지 전 과정을 주도하였습니다.</div>
+        <div class="activity-name editable" contenteditable="false">교내 AI 프로젝트 경진대회 1위</div>
+        <div class="activity-detail editable" contenteditable="false">머신러닝을 활용한 데이터 분석 프로젝트로 1위 수상. 팀 리더로 기획부터 발표까지 전 과정을 주도하였습니다.</div>
         <div class="activity-date editable" contenteditable="false">2025년 10월</div>
       </div>
       <div class="activity-card fade-up" style="transition-delay:0.1s">
-        <div class="activity-icon">🎯</div>
-        <div class="activity-category">동아리</div>
-        <div class="activity-name editable" contenteditable="false">코딩 동아리 부장</div>
-        <div class="activity-detail editable" contenteditable="false">교내 코딩 동아리를 이끌며 소프트웨어 프로젝트 기획 및 운영을 담당하였습니다.</div>
+        <div class="activity-icon">💻</div>
+        <div class="activity-category">코딩</div>
+        <div class="activity-name editable" contenteditable="false">웹 개발 프로젝트 완성</div>
+        <div class="activity-detail editable" contenteditable="false">React와 Node.js를 활용하여 풀스택 웹 애플리케이션을 개발하고 배포하였습니다.</div>
         <div class="activity-date editable" contenteditable="false">2024 ~ 2025</div>
       </div>
       <div class="activity-card fade-up" style="transition-delay:0.2s">
-        <div class="activity-icon">🤝</div>
-        <div class="activity-category">봉사활동</div>
-        <div class="activity-name editable" contenteditable="false">지역 아동센터 교육 봉사</div>
-        <div class="activity-detail editable" contenteditable="false">매주 토요일 지역 아동센터에서 초등학생 대상 컴퓨터 교육 봉사를 진행하였습니다.</div>
+        <div class="activity-icon">🤖</div>
+        <div class="activity-category">학습</div>
+        <div class="activity-name editable" contenteditable="false">AI/ML 심화 과정 이수</div>
+        <div class="activity-detail editable" contenteditable="false">TensorFlow와 Scikit-learn을 활용한 머신러닝 심화 학습 과정을 완료하였습니다.</div>
         <div class="activity-date editable" contenteditable="false">2024 ~ 현재</div>
       </div>
       <div class="activity-card fade-up" style="transition-delay:0.3s">
-        <div class="activity-icon">📜</div>
-        <div class="activity-category">자격증</div>
-        <div class="activity-name editable" contenteditable="false">컴퓨터활용능력 1급</div>
-        <div class="activity-detail editable" contenteditable="false">MS Office 전 프로그램 고급 활용 능력을 보유하고 있습니다.</div>
-        <div class="activity-date editable" contenteditable="false">2025년 3월 취득</div>
+        <div class="activity-icon">📊</div>
+        <div class="activity-category">데이터</div>
+        <div class="activity-name editable" contenteditable="false">데이터 분석 포트폴리오 개발</div>
+        <div class="activity-detail editable" contenteditable="false">Pandas와 Matplotlib을 활용한 데이터 시각화 및 분석 프로젝트 완료</div>
+        <div class="activity-date editable" contenteditable="false">2025년 3월</div>
       </div>
       <div class="activity-card fade-up" style="transition-delay:0.4s">
-        <div class="activity-icon">🌏</div>
-        <div class="activity-category">어학</div>
-        <div class="activity-name editable" contenteditable="false">영어 말하기 대회 금상</div>
-        <div class="activity-detail editable" contenteditable="false">지역 교육청 주최 영어 말하기 대회에서 금상을 수상하였습니다.</div>
+        <div class="activity-icon">🌟</div>
+        <div class="activity-category">상무</div>
+        <div class="activity-name editable" contenteditable="false">교내 개발 동아리 부회장</div>
+        <div class="activity-detail editable" contenteditable="false">웹 개발 및 AI 학습 동아리를 이끌며, 프로젝트 기획 및 코드 리뷰를 담당하였습니다.</div>
         <div class="activity-date editable" contenteditable="false">2025년 5월</div>
       </div>
-      <button class="add-card-btn" id="add-activity-btn" onclick="addActivityCard()">＋ 활동 추가</button>
+      <div class="activity-card fade-up" style="transition-delay:0.5s">
+        <div class="activity-icon">🏅</div>
+        <div class="activity-category">학생회</div>
+        <div class="activity-name editable" contenteditable="false">학생회 체육부장</div>
+        <div class="activity-detail editable" contenteditable="false">학교 체육 행사 기획 및 운영을 주도하며 학생 공동체를 이끌고 있습니다.</div>
+        <div class="activity-date editable" contenteditable="false">2024년 ~ 현재</div>
+      </div>
+      <div class="activity-card fade-up" style="transition-delay:0.6s">
+        <div class="activity-icon">👑</div>
+        <div class="activity-category">리더십</div>
+        <div class="activity-name editable" contenteditable="false">학급 회장 (3년 연임)</div>
+        <div class="activity-detail editable" contenteditable="false">학급 대표로 3년간 활동하며 학급 문화 조성, 행사 운영 및 학급원 중재를 통해 리더십을 발휘했습니다.</div>
+        <div class="activity-date editable" contenteditable="false">2023년 ~ 현재</div>
+      </div>
+      <button class="add-card-btn" id="add-activity-btn" onclick="addActivityCard()">+ 활동 추가</button>
     </div>
   </div>
 </section>
@@ -571,42 +589,42 @@
 <section id="project">
   <div class="section-inner">
     <div class="section-label">Projects</div>
-    <h2 class="section-title fade-up">프로젝트 경험</h2>
-    <p class="section-desc fade-up">직접 기획하고 만들어본 프로젝트들을 소개합니다.</p>
+    <h2 class="section-title fade-up">프로젝트 포트폴리오</h2>
+    <p class="section-desc fade-up">AI, 데이터 분석, 웹 개발 분야에서 진행한 실제 프로젝트들입니다.</p>
     <div class="project-list fade-up" id="project-list">
       <div class="project-card">
-        <div class="project-thumb">🖥️</div>
+        <div class="project-thumb">🤖</div>
         <div class="project-info">
-          <div class="project-tech"><span class="tech-badge editable" contenteditable="false">HTML/CSS</span><span class="tech-badge editable" contenteditable="false">JavaScript</span></div>
-          <div class="project-name editable" contenteditable="false">학교 행사 웹페이지 제작</div>
-          <div class="project-desc editable" contenteditable="false">교내 체육대회 정보를 알리기 위한 반응형 웹페이지를 기획·디자인·개발하였습니다. 학생 약 500명이 실제로 이용하였으며 정보 전달 효율을 크게 높였습니다.</div>
+          <div class="project-tech"><span class="tech-badge editable" contenteditable="false">Python</span><span class="tech-badge editable" contenteditable="false">TensorFlow</span><span class="tech-badge editable" contenteditable="false">Keras</span></div>
+          <div class="project-name editable" contenteditable="false">이미지 분류 AI 모델 개발</div>
+          <div class="project-desc editable" contenteditable="false">CNN(Convolutional Neural Network)을 활용하여 다양한 물체를 분류하는 딥러닝 모델을 개발했습니다. 데이터 전처리부터 모델 최적화까지 전 과정을 수행하였으며, 95% 이상의 정확도를 달성했습니다.</div>
           <div class="project-meta">
-            <span><strong>기간</strong>&nbsp;<span class="editable" contenteditable="false">2025.08 – 2025.09</span></span>
-            <span><strong>역할</strong>&nbsp;<span class="editable" contenteditable="false">기획, 디자인, 개발</span></span>
+            <span><strong>기간</strong>&nbsp;<span class="editable" contenteditable="false">2025.06 – 2025.09</span></span>
+            <span><strong>역할</strong>&nbsp;<span class="editable" contenteditable="false">모델 개발, 데이터 전처리, 평가</span></span>
           </div>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-thumb">📱</div>
+        <div class="project-thumb">📊</div>
         <div class="project-info">
-          <div class="project-tech"><span class="tech-badge editable" contenteditable="false">Python</span><span class="tech-badge editable" contenteditable="false">데이터 분석</span></div>
-          <div class="project-name editable" contenteditable="false">교내 급식 만족도 분석 시스템</div>
-          <div class="project-desc editable" contenteditable="false">학생들의 급식 만족도를 데이터로 수집·분석하여 학교 측에 개선안을 제안한 프로젝트입니다. Python과 Excel을 활용해 통계 분석 보고서를 제출하였습니다.</div>
+          <div class="project-tech"><span class="tech-badge editable" contenteditable="false">Python</span><span class="tech-badge editable" contenteditable="false">Pandas</span><span class="tech-badge editable" contenteditable="false">Matplotlib</span></div>
+          <div class="project-name editable" contenteditable="false">데이터 분석 대시보드 구축</div>
+          <div class="project-desc editable" contenteditable="false">공개 데이터를 활용하여 통계 분석 및 시각화 대시보드를 구축했습니다. 데이터 정제, 분석, 인터랙티브 시각화를 통해 의사결정을 지원하는 도구를 만들었습니다.</div>
           <div class="project-meta">
             <span><strong>기간</strong>&nbsp;<span class="editable" contenteditable="false">2025.04 – 2025.06</span></span>
-            <span><strong>역할</strong>&nbsp;<span class="editable" contenteditable="false">데이터 수집, 분석, 발표</span></span>
+            <span><strong>역할</strong>&nbsp;<span class="editable" contenteditable="false">데이터 분석, 시각화</span></span>
           </div>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-thumb">🎨</div>
+        <div class="project-thumb">💻</div>
         <div class="project-info">
-          <div class="project-tech"><span class="tech-badge editable" contenteditable="false">Figma</span><span class="tech-badge editable" contenteditable="false">UI 디자인</span></div>
-          <div class="project-name editable" contenteditable="false">청소년 자원봉사 앱 UI 기획</div>
-          <div class="project-desc editable" contenteditable="false">청소년들이 쉽게 봉사 활동을 찾고 신청할 수 있는 모바일 앱 UI/UX를 기획하고 프로토타입을 제작하였습니다. 교내 창업 아이디어 대회에서 우수상을 수상하였습니다.</div>
+          <div class="project-tech"><span class="tech-badge editable" contenteditable="false">React</span><span class="tech-badge editable" contenteditable="false">Node.js</span><span class="tech-badge editable" contenteditable="false">MongoDB</span></div>
+          <div class="project-name editable" contenteditable="false">풀스택 웹 애플리케이션 개발</div>
+          <div class="project-desc editable" contenteditable="false">React 프론트엔드와 Node.js 백엔드를 활용한 완전한 웹 애플리케이션을 개발했습니다. 사용자 인증, 데이터베이스 연동, RESTful API 구현 등 모던 웹 개발 전체를 경험했습니다.</div>
           <div class="project-meta">
-            <span><strong>기간</strong>&nbsp;<span class="editable" contenteditable="false">2024.11 – 2024.12</span></span>
-            <span><strong>역할</strong>&nbsp;<span class="editable" contenteditable="false">기획, UI 디자인</span></span>
+            <span><strong>기간</strong>&nbsp;<span class="editable" contenteditable="false">2025.01 – 2025.04</span></span>
+            <span><strong>역할</strong>&nbsp;<span class="editable" contenteditable="false">풀스택 개발, 배포</span></span>
           </div>
         </div>
       </div>
@@ -681,28 +699,28 @@
     <h2 class="section-title fade-up">연락처</h2>
     <div class="contact-grid">
       <div class="contact-links fade-up">
-        <a class="contact-item" href="mailto:example@email.com">
+        <a class="contact-item" href="mailto:24kwai0407@sonline20.sen.go.kr">
           <span class="contact-icon">✉️</span>
-          <div class="contact-text"><div class="label">이메일</div><div class="value editable" contenteditable="false">example@email.com</div></div>
+          <div class="contact-text"><div class="label">이메일</div><div class="value editable" contenteditable="false">24kwai0407@sonline20.sen.go.kr</div></div>
         </a>
         <a class="contact-item" href="tel:010-0000-0000">
           <span class="contact-icon">📞</span>
           <div class="contact-text"><div class="label">전화번호</div><div class="value editable" contenteditable="false">010-0000-0000</div></div>
         </a>
-        <a class="contact-item" href="#">
-          <span class="contact-icon">💼</span>
-          <div class="contact-text"><div class="label">GitHub / 포트폴리오</div><div class="value editable" contenteditable="false">github.com/username</div></div>
+        <a class="contact-item" href="https://github.com/shinhojin">
+          <span class="contact-icon">🔗</span>
+          <div class="contact-text"><div class="label">GitHub</div><div class="value editable" contenteditable="false">github.com/shinhojin</div></div>
         </a>
         <a class="contact-item" href="#">
-          <span class="contact-icon">📘</span>
-          <div class="contact-text"><div class="label">SNS</div><div class="value editable" contenteditable="false">@username</div></div>
+          <span class="contact-icon">🔒</span>
+          <div class="contact-text"><div class="label">포트폴리오 사이트</div><div class="value editable" contenteditable="false">포트폴리오 링크</div></div>
         </a>
       </div>
       <div class="contact-form fade-up" style="transition-delay:0.15s">
-        <div class="form-group"><label>이름</label><input type="text" placeholder="보내시는 분의 이름"></div>
-        <div class="form-group"><label>이메일</label><input type="email" placeholder="답장 받으실 이메일"></div>
-        <div class="form-group"><label>메시지</label><textarea placeholder="문의 내용을 입력해 주세요"></textarea></div>
-        <button class="submit-btn" onclick="showToast('📨 메시지가 전송되었습니다')">메시지 보내기</button>
+        <div class="form-group"><label>이름</label><input type="text" id="contact-name" placeholder="보내시는 분의 이름"></div>
+        <div class="form-group"><label>이메일</label><input type="email" id="contact-email" placeholder="답장 받으실 이메일"></div>
+        <div class="form-group"><label>메시지</label><textarea id="contact-message" placeholder="문의 내용을 입력해 주세요"></textarea></div>
+        <button class="submit-btn" onclick="sendContactEmail()">메시지 보내기</button>
       </div>
     </div>
   </div>
@@ -710,8 +728,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">PORTFOLIO</div>
-  <div class="footer-copy editable" contenteditable="false">© 2026 홍길동 포트폴리오. All rights reserved.</div>
+  <div class="footer-logo">SHIN HO-JIN</div>
+  <div class="footer-copy editable" contenteditable="false">© 2026 신호진 포트폴리오. All rights reserved. | Kwangwoon AI High School</div>
 </footer>
 
 <!-- LOGIN MODAL -->
@@ -748,7 +766,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const ADMIN_ID = 'qwer1234', ADMIN_PW = 'qwer1234';
+const ADMIN_ID = 'admin', ADMIN_PW = 'password1234';
 let isAdmin = false;
 
 function openLogin() {
@@ -857,6 +875,20 @@ function embedVideo(id) {
   if (yt) embedUrl = `https://www.youtube.com/embed/${yt[1]}`;
   document.getElementById(id+'-thumb').innerHTML = `<iframe src="${embedUrl}" allowfullscreen></iframe>`;
   showToast('🎬 영상이 삽입되었습니다');
+}
+function sendContactEmail() {
+  const name = document.getElementById('contact-name').value.trim();
+  const email = document.getElementById('contact-email').value.trim();
+  const message = document.getElementById('contact-message').value.trim();
+  if (!name || !email || !message) {
+    showToast('⚠️ 이름, 이메일, 메시지를 모두 입력하세요');
+    return;
+  }
+  const recipient = '24kwai0407@sonline20.sen.go.kr';
+  const subject = encodeURIComponent(`[포트폴리오 문의] ${name}`);
+  const body = encodeURIComponent(`성함: ${name}%0D%0A이메일: ${email}%0D%0A%0D%0A문의 내용:%0D%0A${message}`);
+  window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+  showToast('📨 이메일 클라이언트를 여는 중입니다');
 }
 function showToast(msg) {
   const t = document.getElementById('toast');
